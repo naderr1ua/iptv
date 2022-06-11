@@ -1,0 +1,50 @@
+name: 🛠 Broken Stream
+description: Report a broken stream
+title: 'Broken: '
+labels: ['🛠 broken stream']
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please fill out the issue template as much as you can so we could efficiently process your request
+
+  - type: input
+    attributes:
+      label: Stream Title
+      description: Please use the exact title, as in how it appears in the playlist.
+      placeholder: 'BBC America East (720p) [Geo-blocked]'
+    validations:
+      required: true
+
+  - type: dropdown
+    attributes:
+      label: What happened to the stream?
+      options:
+        - Not loading
+        - Constantly interrupts/lagging
+        - Stuck at a single frame
+        - I see visual artifacts
+        - Shows looped video
+        - Shows the wrong channel
+        - Displays a message asking to renew subscription
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: Possible Replacement
+      placeholder: 'ex. https://lnc-kdfw-fox-aws.tubi.video/index.m3u8'
+
+  - type: textarea
+    attributes:
+      label: Notes
+      placeholder: 'Anything else we should know?'
+
+  - type: checkboxes
+    attributes:
+      label: Please confirm the following
+      options:
+        - label: I have read [Contributing Guide](https://github.com/iptv-org/iptv/blob/master/CONTRIBUTING.md#report-a-broken-stream)
+          required: true
